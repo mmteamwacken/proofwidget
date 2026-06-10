@@ -818,10 +818,10 @@ function btnStyle(variant, disabled) {
 
 // Simulierte gültige Tokens: Coach-Name + abgelaufenes Token zum Testen
 const VALID_TOKENS = {
-  "COACH-2024-ABC": { coach: "Sandra Meier Coaching", used: false, expires: "2025-12-31" },
-  "MAKE-XYZ-789": { coach: "Thomas Müller GmbH", used: false, expires: "2025-12-31" },
+  "COACH-2024-ABC": { coach: "Sandra Meier Coaching", used: false, expires: "2027-12-31" },
+  "MAKE-XYZ-789": { coach: "Thomas Müller GmbH", used: false, expires: "2027-12-31" },
   "ABGELAUFEN-001": { coach: "Test", used: false, expires: "2020-01-01" },
-  "BENUTZT-002": { coach: "Test", used: true, expires: "2025-12-31" },
+  "BENUTZT-002": { coach: "Test", used: true, expires: "2027-12-31" },
 };
 
 function TokenGate({ onValid }) {
