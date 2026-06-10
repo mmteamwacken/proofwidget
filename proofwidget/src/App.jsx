@@ -923,16 +923,8 @@ function TokenGate({ onValid }) {
 }
 
 export default function App() {
-  const [screen, setScreen] = useState("token"); // "token" | "app" | "dashboard"
-  const [coachName, setCoachName] = useState("");
   const [step, setStep] = useState(0);
   const [userTestimonials, setUserTestimonials] = useState([]);
-
-  const handleTokenValid = (coach) => {
-    setCoachName(coach);
-    setScreen("app");
-    setStep(0);
-  };
 
   const handleSubmit = (form) => {
     setUserTestimonials((prev) => [
@@ -947,8 +939,6 @@ export default function App() {
       },
     ]);
   };
-
-  if (screen === "token") return <TokenGate onValid={handleTokenValid} />;
 
   return (
     <div
@@ -983,15 +973,7 @@ export default function App() {
           }}>TUTORIAL</span>
         </div>
         <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-          <span style={{ color: TEXT_MUTED, fontSize: 12 }}>
-            Eingeladen von <span style={{ color: AMBER }}>{coachName}</span>
-          </span>
-          <button
-            onClick={() => setScreen("token")}
-            style={{ ...btnStyle("ghost"), fontSize: 11, padding: "4px 10px" }}
-          >
-            ← Abmelden
-          </button>
+          <span style={{ color: TEXT_MUTED, fontSize: 12 }}>Interaktive Demo</span>
         </div>
       </div>
 
