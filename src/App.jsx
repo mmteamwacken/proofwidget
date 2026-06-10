@@ -923,7 +923,7 @@ function TokenGate({ onValid }) {
 }
 
 export default function App() {
-  const [screen, setScreen] = useState("token"); // "token" | "app" | "dashboard"
+  const [screen, setScreen] = useState("app"); // "token" | "app" | "dashboard"
   const [coachName, setCoachName] = useState("");
   const [step, setStep] = useState(0);
   const [userTestimonials, setUserTestimonials] = useState([]);
@@ -948,7 +948,7 @@ export default function App() {
     ]);
   };
 
-  if (screen === "token") return <TokenGate onValid={handleTokenValid} />;
+  
 
   return (
     <div
